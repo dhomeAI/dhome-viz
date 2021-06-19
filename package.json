@@ -1,0 +1,23 @@
+{
+  "name": "dhome-viz-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dhomeAI/dhome-viz.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dhomeAI/dhome-viz/issues"
+  },
+  "homepage": "https://github.com/dhomeAI/dhome-viz#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
