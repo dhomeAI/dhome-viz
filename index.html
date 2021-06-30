@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>Model Viewer AR - VR</title>
+  <meta name="description" content="Model Viewer (VR / AR) • A-Frame">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script -->
+  <script src="aframe.min.js"></script>
+  <script src="info-message.js"></script>
+  <!--script src="https://unpkg.com/aframe-extras@3.3.0/dist/aframe-extras.min.js"></script-->
+  <script src="aframe-extras.min.js"></script>
+  <script src="hide-on-enter-ar.js"></script>
+  <script src="ar-shadows.js"></script>
+  <script src="ar-hit-test.js"></script>
+  <script src="model-viewer.js"></script>
+  <script src="background-gradient.js"></script>
+</head>
+<body>
+
+  <div class="ui-canvas">
+    <!-- <div class="logo"></div> -->
+    <img class="logo" src="https://www.dhome.app/wp-content/uploads/2021/04/cropped-dhome-logo_transparent.png" alt="Flowers in Chania">
+
+    <div class="tw-toggle">
+      <input type="radio" name="toggle" value="false">
+      <label class="toggle toggle-yes"><i class="fa fa-times"></i></label>
+      <input checked type="radio" name="toggle" value="-1">
+      <label class="toggle toggle-yes"><i class="fa fa-minus"></i></label>
+      <input type="radio" name="toggle" value="true">
+      <label class="toggle toggle-yes"><i class="fa fa-check"></i></label>
+      <span></span>  
+    </div>
+    
+  </div>
+  
+  <div class="aframebox">
+    <a-scene embedded renderer="colorManagement: true;" model-viewer="gltfModel: #tatami-japan">
+  
+      <!--a-image src="https://www.dhome.app/wp-content/uploads/2021/04/cropped-dhome-logo_transparent.png" material="shader:standard"></a-image-->
+      
+      <a-assets>
+        <!--
+          Model source: https://sketchfab.com/3d-models/triceratops-d16aabe33dc24f8ab37e3df50c068265
+          Model author: https://sketchfab.com/VapTor
+          Model license: Sketcfab Standard
+        -->
+        <a-asset-item id="tatami-japan"
+          src="https://cdn.glitch.com/4a75df8d-721f-49e9-afda-4f599ff73364%2Fscene.glb?v=1624263140872"
+          response-type="arraybuffer" crossorigin="anonymous"></a-asset-item>
+    
+        <a-asset-item id="reticle"
+          src="https://cdn.aframe.io/examples/ar/models/reticle/reticle.gltf"
+          response-type="arraybuffer" crossorigin="anonymous"></a-asset-item>
+    
+        <img id="shadow" src="https://cdn.glitch.com/20600112-c04b-492c-8190-8a5ccc06f37d%2Fshadow.png?v=1606338852399">
+        <img id="logo" src="https://www.dhome.app/wp-content/uploads/2021/04/cropped-dhome-logo_transparent.png" crossorigin="anonymous">
+      </a-assets>
+        </a-scene>
+
+   <!-- <a-scene embedded>
+    <a-sphere position="0 1.25 -1" radius="1.25" color="#EF2D5E"></a-sphere>
+    <a-box position="-1 0.5 1" rotation="0 45 0" width="1" height="1" depth="1"  color="#4CC3D9"></a-box>
+    <a-cylinder position="1 0.75 1" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+    <a-plane rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+
+    <a-sky color="#ECECEC"></a-sky>
+    <a-entity position="0 0 3.8">
+        <a-camera></a-camera>
+    </a-entity>
+    </a-scene> -->
+</div>
+</body>
+</html>
